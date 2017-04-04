@@ -1,0 +1,20 @@
+{
+  "name": "easy-vector2d",
+  "version": "0.1.0",
+  "description": "Simple TypeScript/JavaScript library for 2D (x, y) vector types and functions",
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "files": [
+    "lib/"
+  ],
+  "repository": "git@github.com:philiplopez/easy-vector2d.git",
+  "author": "Philip Lopez <philip.lopez@philiplopez.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "trash lib && tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^2.2.2",
+    "trash-cli": "^1.4.0"
+  }
+}
