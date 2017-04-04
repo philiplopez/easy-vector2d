@@ -1,6 +1,6 @@
 {
   "name": "easy-vector2d",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple TypeScript/JavaScript library for 2D (x, y) vector types and functions",
   "main": "lib/index.js",
   "typings": "lib/index",
