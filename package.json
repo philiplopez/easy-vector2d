@@ -11,11 +11,16 @@
   "author": "Philip Lopez <philip.lopez@philiplopez.com>",
   "license": "MIT",
   "scripts": {
+    "test": "npm run build && ava test",
     "prepublishOnly": "npm run build",
-    "build": "trash lib && tsc -p tsconfig.json"
+    "build": "trash lib && tsc -p tsconfig.json",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A lib",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
-    "typescript": "^2.2.2",
-    "trash-cli": "^1.4.0"
+    "ava": "^0.19.1",
+    "trash-cli": "^1.4.0",
+    "typescript": "^2.2.2"
   }
 }
