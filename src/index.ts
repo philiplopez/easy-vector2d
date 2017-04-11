@@ -24,11 +24,15 @@ export function subtract(left : Vector2D, right : Vector2D) : Vector2D {
     }
 }
 
-export function length({x, y} : Vector2D) {
+export function distance(from : Vector2D, to : Vector2D) : number {
+    return length(subtract(to, from))
+}
+
+export function length({x, y} : Vector2D) : number {
     return Math.sqrt(x * x + y * y);
 }
 
-export function normalise(v : Vector2D) {
+export function normalise(v : Vector2D) : Vector2D {
     // FIXME: test this, especially for divide-by-zero...
     const vLength = length(v);
     return (vLength === 0)
@@ -37,7 +41,7 @@ export function normalise(v : Vector2D) {
 }
 export const normalize = normalise; // alias
 
-export function unitDirection(from : Vector2D, to : Vector2D) {
+export function unitDirection(from : Vector2D, to : Vector2D) : Vector2D {
     const direction = subtract(to, from);
     return normalise(direction);
 }
